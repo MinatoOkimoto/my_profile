@@ -1,0 +1,64 @@
+@charset "utf-8";
+h1 {
+    font-family: "serif",serif;
+}
+#art_1 {
+    background:#baf0f0;
+    margin: 0;
+
+}
+
+#art_2 {
+    background:#fdc8c0;
+    margin: 0;
+}
+
+#pic1{
+    display:block;
+    width: 20%;
+    height: 20%;
+}
+#pic2{
+    display:block;
+    width: 20%;
+    height: 20%;
+}
+
+
+ul {
+    display: flex;
+    /*justify-content: space-between;*/
+    justify-content: center;
+  }
+
+/*
+section{
+    clear: left;
+}
+*/
+
+.clearfix:after {
+    content:"";
+    display:block;
+    clear:both;
+}
+
+/*
+.pics{
+    position: relative; 
+    overflow: hidden;
+}
+
+.pics ul{
+    position: relative;
+    left: 50%;
+    float: left;
+}
+
+.pics ul img {
+    position: relative;
+    left: -50%;
+    float: left;
+    list-style: none;
+  }
+*/

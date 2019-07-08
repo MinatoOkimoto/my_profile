@@ -1,0 +1,33 @@
+@charset "utf-8";
+h1{
+    font-size: 50px;
+    font-family: 'Noto Sans JP', sans-serif;
+    color: #000000;
+    text-shadow: 10px -10px 5px #cccccc;
+    margin-top: 150px;
+    margin-bottom: 150px;
+}
+p{
+    font-size: 20px;
+    font-family: 'Noto Sans JP', sans-serif;
+    color: #ffffff;
+}
+ .btn a {
+     background-color: #000000;
+     color:#ffffff;
+     font-size: 30px;
+     font-family: 'Noto Sans JP', sans-serif;
+     width: 120px;
+     display: block;
+     text-align: center;
+     line-height: 50px;
+     margin-top: 20px;
+     border-radius: 5px;
+     border: 3px solid #000000;
+}
+ .btn a:hover {
+     text-decoration: none;
+     background-color: #ffffff;
+     color: #36abc0;
+     text-shadow: 2px -2px 1px #000000
+ }

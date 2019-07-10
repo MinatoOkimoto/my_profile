@@ -13,7 +13,7 @@ p{
     color: #ffffff;
 }
  .btn a {
-     background-color: #000000;
+     background-color: #618556;
      color:#ffffff;
      font-size: 30px;
      font-family: 'Noto Sans JP', sans-serif;
@@ -31,3 +31,15 @@ p{
      color: #36abc0;
      text-shadow: 2px -2px 1px #000000
  }
+img{
+    max-width: 70%;
+    max-height: 70%;
+    width: auto;
+    height: auto;
+}
+.box{
+    position: relative;
+    right: -10%;
+    float: right;
+    list-style: none;
+}

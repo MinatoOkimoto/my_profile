@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Zdog Tutorial</title>
+  <script src="https://unpkg.com/zdog@1/dist/zdog.dist.min.js"></script>
+</head>
+<body>
+  <canvas width="240" height="240" class="zdog-canvas"></canvas>
+  <script>
+    // ここにコードを記述
+    const illo = new Zdog.Illustration({
+    element: '.zdog-canvas',
+    dragRotate: true    // ←これを追加
+    })
+
+    // 円を追加
+    //new Zdog.Ellipse({
+    //addTo: illo,
+    //diameter: 80,    // 直径
+    //stroke: 20,      // 線の太さ
+    //color: '#E62'    // 図形の色
+    //})
+    var polygon = new Zdog.Polygon({
+        addTo: illo,
+        translate: { x: 0 }, // 
+        radius: 60,
+        sides: 5,
+        stroke: 20,
+        color: '#EA0',
+    });
+
+    new Zdog.Shape({
+        addTo: illo,
+        translate: { x: -30, y: -60 }, // 
+        stroke: 20,
+        color: '#636',
+    });
+
+    new Zdog.Shape({
+        addTo: illo,
+        translate: { x: 30, y: -60 }, // 
+        stroke: 20,
+        color: '#636',
+    });
+
+    new Zdog.Shape({
+        addTo: illo,
+        path: [
+            { x: 60 ,y: -20}, // start at 1st point
+            { x: 100 ,y: -30 }, // line to 2nd point
+        ],
+        stroke: 10,
+        color: '#636',
+    })
+    new Zdog.Shape({
+        addTo: illo,
+        path: [
+            { x: -60 ,y: -20}, // start at 1st point
+            { x: -100 ,y: -30 }, // line to 2nd point
+        ],
+        stroke: 10,
+        color: '#636',
+    })
+    new Zdog.Shape({
+        addTo: illo,
+        path: [
+            { x: 40 ,y: 50}, // start at 1st point
+            { x: 60 ,y: 80 }, // line to 2nd point
+        ],
+        stroke: 10,
+        color: '#636',
+    })
+    new Zdog.Shape({
+        addTo: illo,
+        path: [
+            { x: -40 ,y: 50}, // start at 1st point
+            { x: -60 ,y: 80 }, // line to 2nd point
+        ],
+        stroke: 10,
+        color: '#636',
+    })
+    // 図形を描画
+    illo.updateRenderGraph()
+    const animate = () => {
+        illo.rotate.x += 0.03
+        illo.rotate.y += 0.03             // 図形を回転
+        illo.updateRenderGraph()          // 回転後の図形を描画
+
+        requestAnimationFrame( animate )  // 再度呼び出し
+    }
+    animate()
+  </script>
+</body>
+</html>
